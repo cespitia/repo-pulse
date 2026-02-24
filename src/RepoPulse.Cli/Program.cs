@@ -2,6 +2,7 @@
 using RepoPulse.Cli.Config;
 using RepoPulse.Cli.Data;
 using RepoPulse.Cli.GitHub;
+using RepoPulse.Cli.Reports;
 
 // Parse CLI arguments
 var cliArgs = ArgsParser.Parse(Environment.GetCommandLineArgs().Skip(1).ToArray());
@@ -56,6 +57,17 @@ try
     var repoId = await store.UpsertRepoAsync(owner, repo);
 
     await store.InsertCommitsAsync(repoId, commits);
+
+var report = new ReportBuilder(cs);
+var html = await report.BuildHtmlAsync(repoId, $"{owner}/{repo}", cliArgs.Days, sinceUtc);
+
+var outPath = Path.Combine(AppContext.BaseDirectory, "..", "..", "..", "..", "artifacts", "report.html");
+outPath = Path.GetFullPath(outPath);
+
+Directory.CreateDirectory(Path.GetDirectoryName(outPath)!);
+await File.WriteAllTextAsync(outPath, html);
+
+Console.WriteLine($"Report generated: {outPath}");
 
     Console.WriteLine($"Commits persisted: {commits.Count}");
     Console.WriteLine();
