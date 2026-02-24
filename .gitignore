@@ -1,0 +1,3 @@
+# RepoPulse artifacts (generated)
+artifacts/*
+!artifacts/.gitkeep
