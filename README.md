@@ -18,9 +18,10 @@ CLI → GitHub API + SQL Server → report.html
 - Generate report.html with totals and latest activity
 - Friendly errors for rate limits and missing auth
 
-## Run (later)
+## Run
 ```bash
 dotnet run --project src/RepoPulse.Cli -- --repo owner/name --days 7
+```
 
 ## Screenshots
 
