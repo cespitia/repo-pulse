@@ -13,7 +13,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("RepoPulse.Cli")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+74b2ef9b8feaeda41af354d8432cee1766b1856d")]
 [assembly: System.Reflection.AssemblyProductAttribute("RepoPulse.Cli")]
 [assembly: System.Reflection.AssemblyTitleAttribute("RepoPulse.Cli")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
