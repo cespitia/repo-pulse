@@ -21,3 +21,14 @@ CLI → GitHub API + SQL Server → report.html
 ## Run (later)
 ```bash
 dotnet run --project src/RepoPulse.Cli -- --repo owner/name --days 7
+
+## Screenshots
+
+### CLI run
+![CLI run](docs/screenshots/cli-run.png)
+
+### Report summary
+![Report summary](docs/screenshots/report-summary.png)
+
+### Latest activity
+![Latest activity](docs/screenshots/report-latest-activity.png)
